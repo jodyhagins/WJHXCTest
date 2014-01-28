@@ -13,12 +13,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.8'
 
-  s.source               = { :git => "file:///Users/jody/Documents/XCode/WJHXCTest", :commit => '585d6ddddada1355611cf5f2f695de22bc2506de' }
+  s.source               = { :git => "https://github.com/jodyhagins/WJHXCTest.git", :tag => "#{s.version}" }
   s.source_files         = 'WJHXCTest/**/*.{h,m}'
   s.header_mappings_dir  = 'WJHXCTest'
   s.header_dir           = 'WJHXCTest'
   s.private_header_files = 'WJHXCTest/Private/*.h'
-
 
   s.requires_arc = true
   s.xcconfig     = { 'OTHER_LDFLAGS' => '-lObjC' }
