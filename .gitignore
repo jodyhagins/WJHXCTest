@@ -1,0 +1,6 @@
+.DS_Store
+.Trashes
+*.swp
+UserInterfaceState.xcuserstate
+xcdebugger/
+*.moved-aside

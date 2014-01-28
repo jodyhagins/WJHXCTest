@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C80DE69C1894BEC1008EE3FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE69B1894BEC1008EE3FB /* Foundation.framework */; };
+		C80DE6A11894BEC1008EE3FB /* WJHXCTest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C80DE6A01894BEC1008EE3FB /* WJHXCTest.h */; };
+		C80DE6A31894BEC1008EE3FB /* WJHXCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6A21894BEC1008EE3FB /* WJHXCTest.m */; };
+		C80DE6AA1894BEC1008EE3FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6A91894BEC1008EE3FB /* XCTest.framework */; };
+		C80DE6AB1894BEC1008EE3FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE69B1894BEC1008EE3FB /* Foundation.framework */; };
+		C80DE6AD1894BEC1008EE3FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6AC1894BEC1008EE3FB /* UIKit.framework */; };
+		C80DE6B01894BEC1008EE3FB /* libWJHXCTestiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6981894BEC1008EE3FB /* libWJHXCTestiOS.a */; };
+		C80DE6B61894BEC1008EE3FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C80DE6B41894BEC1008EE3FB /* InfoPlist.strings */; };
+		C80DE6B81894BEC1008EE3FB /* WJHXCTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6B71894BEC1008EE3FB /* WJHXCTestTests.m */; };
+		C80DE6C31894C271008EE3FB /* _WJHXCTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6C21894C271008EE3FB /* _WJHXCTestObserver.m */; };
+		C80DE6C51894C363008EE3FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6A91894BEC1008EE3FB /* XCTest.framework */; };
+		C80DE6C81894C4F1008EE3FB /* XCTestObserver+WJHObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6C71894C4F1008EE3FB /* XCTestObserver+WJHObserver.m */; };
+		C80DE6D0189559A0008EE3FB /* _WJHXCTestCaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6CF189559A0008EE3FB /* _WJHXCTestCaseData.m */; };
+		C80DE6D318955A42008EE3FB /* _WJHXCTestInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6D218955A42008EE3FB /* _WJHXCTestInvocation.m */; };
+		C80DE6D618958C33008EE3FB /* XCTestCase+WJHAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6D518958C33008EE3FB /* XCTestCase+WJHAsync.m */; };
+		C80DE6DD1895A65C008EE3FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6DC1895A65C008EE3FB /* Cocoa.framework */; };
+		C80DE6ED1895A65C008EE3FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6A91894BEC1008EE3FB /* XCTest.framework */; };
+		C80DE6EE1895A65C008EE3FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6DC1895A65C008EE3FB /* Cocoa.framework */; };
+		C80DE6F11895A65C008EE3FB /* libWJHXCTestOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6DB1895A65C008EE3FB /* libWJHXCTestOSX.a */; };
+		C80DE7001895A6E3008EE3FB /* _WJHXCTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6C21894C271008EE3FB /* _WJHXCTestObserver.m */; };
+		C80DE7011895A6E3008EE3FB /* _WJHXCTestCaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6CF189559A0008EE3FB /* _WJHXCTestCaseData.m */; };
+		C80DE7021895A6E3008EE3FB /* _WJHXCTestInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6D218955A42008EE3FB /* _WJHXCTestInvocation.m */; };
+		C80DE7031895A6E3008EE3FB /* WJHXCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6A21894BEC1008EE3FB /* WJHXCTest.m */; };
+		C80DE7041895A6E3008EE3FB /* XCTestCase+WJHAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6D518958C33008EE3FB /* XCTestCase+WJHAsync.m */; };
+		C80DE7051895A6E3008EE3FB /* XCTestObserver+WJHObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6C71894C4F1008EE3FB /* XCTestObserver+WJHObserver.m */; };
+		C80DE7061895A724008EE3FB /* WJHXCTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DE6B71894BEC1008EE3FB /* WJHXCTestTests.m */; };
+		C80DE7341895ABF4008EE3FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80DE6A91894BEC1008EE3FB /* XCTest.framework */; };
+		C828C3471895C84E0031C289 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C828C3461895C84E0031C289 /* ExampleTests.m */; };
+		C828C3481895C84E0031C289 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C828C3461895C84E0031C289 /* ExampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C80DE6AE1894BEC1008EE3FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C80DE6901894BEC1008EE3FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C80DE6971894BEC1008EE3FB;
+			remoteInfo = WJHXCTest;
+		};
+		C80DE6EF1895A65C008EE3FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C80DE6901894BEC1008EE3FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C80DE6DA1895A65C008EE3FB;
+			remoteInfo = WJHXCTestOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C80DE6961894BEC1008EE3FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				C80DE6A11894BEC1008EE3FB /* WJHXCTest.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C80DE6981894BEC1008EE3FB /* libWJHXCTestiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWJHXCTestiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80DE69B1894BEC1008EE3FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C80DE69F1894BEC1008EE3FB /* WJHXCTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WJHXCTest-Prefix.pch"; sourceTree = "<group>"; };
+		C80DE6A01894BEC1008EE3FB /* WJHXCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJHXCTest.h; sourceTree = "<group>"; };
+		C80DE6A21894BEC1008EE3FB /* WJHXCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJHXCTest.m; sourceTree = "<group>"; };
+		C80DE6A81894BEC1008EE3FB /* WJHXCTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WJHXCTestTests.xctest; path = WJHXCTestiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80DE6A91894BEC1008EE3FB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C80DE6AC1894BEC1008EE3FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C80DE6B31894BEC1008EE3FB /* WJHXCTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WJHXCTestTests-Info.plist"; sourceTree = "<group>"; };
+		C80DE6B51894BEC1008EE3FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C80DE6B71894BEC1008EE3FB /* WJHXCTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJHXCTestTests.m; sourceTree = "<group>"; };
+		C80DE6C11894C271008EE3FB /* _WJHXCTestObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _WJHXCTestObserver.h; path = Private/_WJHXCTestObserver.h; sourceTree = "<group>"; };
+		C80DE6C21894C271008EE3FB /* _WJHXCTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _WJHXCTestObserver.m; path = Private/_WJHXCTestObserver.m; sourceTree = "<group>"; };
+		C80DE6C61894C4F1008EE3FB /* XCTestObserver+WJHObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestObserver+WJHObserver.h"; sourceTree = "<group>"; };
+		C80DE6C71894C4F1008EE3FB /* XCTestObserver+WJHObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestObserver+WJHObserver.m"; sourceTree = "<group>"; };
+		C80DE6CE189559A0008EE3FB /* _WJHXCTestCaseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _WJHXCTestCaseData.h; path = Private/_WJHXCTestCaseData.h; sourceTree = "<group>"; };
+		C80DE6CF189559A0008EE3FB /* _WJHXCTestCaseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _WJHXCTestCaseData.m; path = Private/_WJHXCTestCaseData.m; sourceTree = "<group>"; };
+		C80DE6D118955A42008EE3FB /* _WJHXCTestInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _WJHXCTestInvocation.h; path = Private/_WJHXCTestInvocation.h; sourceTree = "<group>"; };
+		C80DE6D218955A42008EE3FB /* _WJHXCTestInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _WJHXCTestInvocation.m; path = Private/_WJHXCTestInvocation.m; sourceTree = "<group>"; };
+		C80DE6D418958C33008EE3FB /* XCTestCase+WJHAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+WJHAsync.h"; sourceTree = "<group>"; };
+		C80DE6D518958C33008EE3FB /* XCTestCase+WJHAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+WJHAsync.m"; sourceTree = "<group>"; };
+		C80DE6DB1895A65C008EE3FB /* libWJHXCTestOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWJHXCTestOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80DE6DC1895A65C008EE3FB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		C80DE6DF1895A65C008EE3FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C80DE6E01895A65C008EE3FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C80DE6E11895A65C008EE3FB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C80DE6EC1895A65C008EE3FB /* WJHXCTestOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WJHXCTestOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C828C3461895C84E0031C289 /* ExampleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C80DE6951894BEC1008EE3FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80DE6C51894C363008EE3FB /* XCTest.framework in Frameworks */,
+				C80DE69C1894BEC1008EE3FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C80DE6A51894BEC1008EE3FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80DE6B01894BEC1008EE3FB /* libWJHXCTestiOS.a in Frameworks */,
+				C80DE6AA1894BEC1008EE3FB /* XCTest.framework in Frameworks */,
+				C80DE6AD1894BEC1008EE3FB /* UIKit.framework in Frameworks */,
+				C80DE6AB1894BEC1008EE3FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C80DE6D81895A65C008EE3FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80DE7341895ABF4008EE3FB /* XCTest.framework in Frameworks */,
+				C80DE6DD1895A65C008EE3FB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C80DE6E91895A65C008EE3FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80DE6EE1895A65C008EE3FB /* Cocoa.framework in Frameworks */,
+				C80DE6F11895A65C008EE3FB /* libWJHXCTestOSX.a in Frameworks */,
+				C80DE6ED1895A65C008EE3FB /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C80DE68F1894BEC1008EE3FB = {
+			isa = PBXGroup;
+			children = (
+				C80DE69D1894BEC1008EE3FB /* WJHXCTest */,
+				C80DE6B11894BEC1008EE3FB /* WJHXCTestTests */,
+				C80DE69A1894BEC1008EE3FB /* Frameworks */,
+				C80DE6991894BEC1008EE3FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C80DE6991894BEC1008EE3FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C80DE6981894BEC1008EE3FB /* libWJHXCTestiOS.a */,
+				C80DE6A81894BEC1008EE3FB /* WJHXCTestTests.xctest */,
+				C80DE6DB1895A65C008EE3FB /* libWJHXCTestOSX.a */,
+				C80DE6EC1895A65C008EE3FB /* WJHXCTestOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C80DE69A1894BEC1008EE3FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C80DE69B1894BEC1008EE3FB /* Foundation.framework */,
+				C80DE6A91894BEC1008EE3FB /* XCTest.framework */,
+				C80DE6AC1894BEC1008EE3FB /* UIKit.framework */,
+				C80DE6DC1895A65C008EE3FB /* Cocoa.framework */,
+				C80DE6DE1895A65C008EE3FB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C80DE69D1894BEC1008EE3FB /* WJHXCTest */ = {
+			isa = PBXGroup;
+			children = (
+				C80DE6C41894C27E008EE3FB /* Private */,
+				C80DE6A01894BEC1008EE3FB /* WJHXCTest.h */,
+				C80DE6A21894BEC1008EE3FB /* WJHXCTest.m */,
+				C80DE6D418958C33008EE3FB /* XCTestCase+WJHAsync.h */,
+				C80DE6D518958C33008EE3FB /* XCTestCase+WJHAsync.m */,
+				C80DE6C61894C4F1008EE3FB /* XCTestObserver+WJHObserver.h */,
+				C80DE6C71894C4F1008EE3FB /* XCTestObserver+WJHObserver.m */,
+				C80DE69E1894BEC1008EE3FB /* Supporting Files */,
+			);
+			path = WJHXCTest;
+			sourceTree = "<group>";
+		};
+		C80DE69E1894BEC1008EE3FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C80DE69F1894BEC1008EE3FB /* WJHXCTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C80DE6B11894BEC1008EE3FB /* WJHXCTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				C80DE6B71894BEC1008EE3FB /* WJHXCTestTests.m */,
+				C828C3461895C84E0031C289 /* ExampleTests.m */,
+				C80DE6B21894BEC1008EE3FB /* Supporting Files */,
+			);
+			path = WJHXCTestTests;
+			sourceTree = "<group>";
+		};
+		C80DE6B21894BEC1008EE3FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C80DE6B31894BEC1008EE3FB /* WJHXCTestTests-Info.plist */,
+				C80DE6B41894BEC1008EE3FB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C80DE6C41894C27E008EE3FB /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				C80DE6C11894C271008EE3FB /* _WJHXCTestObserver.h */,
+				C80DE6C21894C271008EE3FB /* _WJHXCTestObserver.m */,
+				C80DE6CE189559A0008EE3FB /* _WJHXCTestCaseData.h */,
+				C80DE6CF189559A0008EE3FB /* _WJHXCTestCaseData.m */,
+				C80DE6D118955A42008EE3FB /* _WJHXCTestInvocation.h */,
+				C80DE6D218955A42008EE3FB /* _WJHXCTestInvocation.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		C80DE6DE1895A65C008EE3FB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C80DE6DF1895A65C008EE3FB /* Foundation.framework */,
+				C80DE6E01895A65C008EE3FB /* CoreData.framework */,
+				C80DE6E11895A65C008EE3FB /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C80DE6D91895A65C008EE3FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C80DE6971894BEC1008EE3FB /* WJHXCTestiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C80DE6BB1894BEC1008EE3FB /* Build configuration list for PBXNativeTarget "WJHXCTestiOS" */;
+			buildPhases = (
+				C80DE6941894BEC1008EE3FB /* Sources */,
+				C80DE6951894BEC1008EE3FB /* Frameworks */,
+				C80DE6961894BEC1008EE3FB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WJHXCTestiOS;
+			productName = WJHXCTest;
+			productReference = C80DE6981894BEC1008EE3FB /* libWJHXCTestiOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C80DE6A71894BEC1008EE3FB /* WJHXCTestiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C80DE6BE1894BEC1008EE3FB /* Build configuration list for PBXNativeTarget "WJHXCTestiOSTests" */;
+			buildPhases = (
+				C80DE6A41894BEC1008EE3FB /* Sources */,
+				C80DE6A51894BEC1008EE3FB /* Frameworks */,
+				C80DE6A61894BEC1008EE3FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C80DE6AF1894BEC1008EE3FB /* PBXTargetDependency */,
+			);
+			name = WJHXCTestiOSTests;
+			productName = WJHXCTestTests;
+			productReference = C80DE6A81894BEC1008EE3FB /* WJHXCTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C80DE6DA1895A65C008EE3FB /* WJHXCTestOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C80DE6FA1895A65C008EE3FB /* Build configuration list for PBXNativeTarget "WJHXCTestOSX" */;
+			buildPhases = (
+				C80DE6D71895A65C008EE3FB /* Sources */,
+				C80DE6D81895A65C008EE3FB /* Frameworks */,
+				C80DE6D91895A65C008EE3FB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WJHXCTestOSX;
+			productName = WJHXCTestOSX;
+			productReference = C80DE6DB1895A65C008EE3FB /* libWJHXCTestOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C80DE6EB1895A65C008EE3FB /* WJHXCTestOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C80DE6FD1895A65C008EE3FB /* Build configuration list for PBXNativeTarget "WJHXCTestOSXTests" */;
+			buildPhases = (
+				C80DE6E81895A65C008EE3FB /* Sources */,
+				C80DE6E91895A65C008EE3FB /* Frameworks */,
+				C80DE6EA1895A65C008EE3FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C80DE6F01895A65C008EE3FB /* PBXTargetDependency */,
+			);
+			name = WJHXCTestOSXTests;
+			productName = WJHXCTestOSXTests;
+			productReference = C80DE6EC1895A65C008EE3FB /* WJHXCTestOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C80DE6901894BEC1008EE3FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jody Hagins";
+			};
+			buildConfigurationList = C80DE6931894BEC1008EE3FB /* Build configuration list for PBXProject "WJHXCTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C80DE68F1894BEC1008EE3FB;
+			productRefGroup = C80DE6991894BEC1008EE3FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C80DE6971894BEC1008EE3FB /* WJHXCTestiOS */,
+				C80DE6A71894BEC1008EE3FB /* WJHXCTestiOSTests */,
+				C80DE6DA1895A65C008EE3FB /* WJHXCTestOSX */,
+				C80DE6EB1895A65C008EE3FB /* WJHXCTestOSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C80DE6A61894BEC1008EE3FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80DE6B61894BEC1008EE3FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C80DE6EA1895A65C008EE3FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C80DE6941894BEC1008EE3FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80DE6D0189559A0008EE3FB /* _WJHXCTestCaseData.m in Sources */,
+				C80DE6D618958C33008EE3FB /* XCTestCase+WJHAsync.m in Sources */,
+				C80DE6D318955A42008EE3FB /* _WJHXCTestInvocation.m in Sources */,
+				C80DE6C31894C271008EE3FB /* _WJHXCTestObserver.m in Sources */,
+				C80DE6C81894C4F1008EE3FB /* XCTestObserver+WJHObserver.m in Sources */,
+				C80DE6A31894BEC1008EE3FB /* WJHXCTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C80DE6A41894BEC1008EE3FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C828C3471895C84E0031C289 /* ExampleTests.m in Sources */,
+				C80DE6B81894BEC1008EE3FB /* WJHXCTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C80DE6D71895A65C008EE3FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80DE7001895A6E3008EE3FB /* _WJHXCTestObserver.m in Sources */,
+				C80DE7011895A6E3008EE3FB /* _WJHXCTestCaseData.m in Sources */,
+				C80DE7021895A6E3008EE3FB /* _WJHXCTestInvocation.m in Sources */,
+				C80DE7031895A6E3008EE3FB /* WJHXCTest.m in Sources */,
+				C80DE7041895A6E3008EE3FB /* XCTestCase+WJHAsync.m in Sources */,
+				C80DE7051895A6E3008EE3FB /* XCTestObserver+WJHObserver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C80DE6E81895A65C008EE3FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C828C3481895C84E0031C289 /* ExampleTests.m in Sources */,
+				C80DE7061895A724008EE3FB /* WJHXCTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C80DE6AF1894BEC1008EE3FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C80DE6971894BEC1008EE3FB /* WJHXCTestiOS */;
+			targetProxy = C80DE6AE1894BEC1008EE3FB /* PBXContainerItemProxy */;
+		};
+		C80DE6F01895A65C008EE3FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C80DE6DA1895A65C008EE3FB /* WJHXCTestOSX */;
+			targetProxy = C80DE6EF1895A65C008EE3FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C80DE6B41894BEC1008EE3FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C80DE6B51894BEC1008EE3FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C80DE6B91894BEC1008EE3FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C80DE6BA1894BEC1008EE3FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C80DE6BC1894BEC1008EE3FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WJHXCTest.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJHXCTest/WJHXCTest-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C80DE6BD1894BEC1008EE3FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WJHXCTest.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJHXCTest/WJHXCTest-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C80DE6BF1894BEC1008EE3FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJHXCTest/WJHXCTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WJHXCTestTests/WJHXCTestTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C80DE6C01894BEC1008EE3FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJHXCTest/WJHXCTest-Prefix.pch";
+				INFOPLIST_FILE = "WJHXCTestTests/WJHXCTestTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		C80DE6FB1895A65C008EE3FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJHXCTest/WJHXCTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C80DE6FC1895A65C008EE3FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJHXCTest/WJHXCTest-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C80DE6FE1895A65C008EE3FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJHXCTest/WJHXCTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WJHXCTestTests/WJHXCTestTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C80DE6FF1895A65C008EE3FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJHXCTest/WJHXCTest-Prefix.pch";
+				INFOPLIST_FILE = "WJHXCTestTests/WJHXCTestTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C80DE6931894BEC1008EE3FB /* Build configuration list for PBXProject "WJHXCTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C80DE6B91894BEC1008EE3FB /* Debug */,
+				C80DE6BA1894BEC1008EE3FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C80DE6BB1894BEC1008EE3FB /* Build configuration list for PBXNativeTarget "WJHXCTestiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C80DE6BC1894BEC1008EE3FB /* Debug */,
+				C80DE6BD1894BEC1008EE3FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C80DE6BE1894BEC1008EE3FB /* Build configuration list for PBXNativeTarget "WJHXCTestiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C80DE6BF1894BEC1008EE3FB /* Debug */,
+				C80DE6C01894BEC1008EE3FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C80DE6FA1895A65C008EE3FB /* Build configuration list for PBXNativeTarget "WJHXCTestOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C80DE6FB1895A65C008EE3FB /* Debug */,
+				C80DE6FC1895A65C008EE3FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C80DE6FD1895A65C008EE3FB /* Build configuration list for PBXNativeTarget "WJHXCTestOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C80DE6FE1895A65C008EE3FB /* Debug */,
+				C80DE6FF1895A65C008EE3FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C80DE6901894BEC1008EE3FB /* Project object */;
+}
