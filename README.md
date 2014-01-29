@@ -46,37 +46,39 @@ If a test method name does not fit any of the cases described above, the test wi
 
 ## Examples
 
-	- (void)testAsyncMainLoopStillExecutesWhileTestDoesSomethingElse
-	{
-	  self.wjhFinishOnExit = YES;
-	  __block BOOL ranOnMain = NO;
-	  dispatch_async(dispatch_get_main_queue(), ^{
-	    ranOnMain = YES;
-	  });
-	  usleep(0.1 * 1000000);
-	  XCTAssertTrue(ranOnMain, @"Expect the dispatched block to have run on the main thread while sleeping");
-	}
+```objc
+- (void)testAsyncMainLoopStillExecutesWhileTestDoesSomethingElse
+{
+  self.wjhFinishOnExit = YES;
+  __block BOOL ranOnMain = NO;
+  dispatch_async(dispatch_get_main_queue(), ^{
+    ranOnMain = YES;
+  });
+  usleep(0.1 * 1000000);
+  XCTAssertTrue(ranOnMain, @"Expect the dispatched block to have run on the main thread while sleeping");
+}
 
-	- (void)testAsyncOnSeparateThreadFinishesOnMainThread
-	{
-	  dispatch_async(dispatch_get_main_queue(), ^{
-	    XCTFinished();
-	  });
-	}
+- (void)testAsyncOnSeparateThreadFinishesOnMainThread
+{
+  dispatch_async(dispatch_get_main_queue(), ^{
+    XCTFinished();
+  });
+}
 
-	- (void)testAsyncmainFinishesOnMainThread
-	{
-	  dispatch_async(dispatch_get_main_queue(), ^{
-	    XCTFinished();
-	  });
-	}
+- (void)testAsyncmainFinishesOnMainThread
+{
+  dispatch_async(dispatch_get_main_queue(), ^{
+    XCTFinished();
+  });
+}
 
-	- (void)testAsyncmainFinishesOnSomeOtherThread
-	{
-	  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-	    XCTFinished();
-	  });
-	}
+- (void)testAsyncmainFinishesOnSomeOtherThread
+{
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    XCTFinished();
+  });
+}
+```
 
 ## Observing test progress with notifications
 
