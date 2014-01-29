@@ -14,6 +14,8 @@ The code most be compiled and linked into your test.  The project provides a coc
 
 ## Using the library
 
+Check out the [documentation](http://cocoadocs.org/docsets/WJHXCTest/0.0.1/) for a detail description of the API.
+
 The easiest way is to just include the main header file:
 
     #import <WJHXCTest/WJHXCTest.h>
