@@ -77,18 +77,12 @@ runLoopUntilDoneOrTimeout(_WJHXCTestCaseData *data)
   // NSDate *expireTime = [NSDate dateWithTimeIntervalSinceNow:data.timeoutInterval];
   for (;;) {
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:data.runLoopInterval]];
-#if 0
-    if (data.invocationHasCompleted && (data.hasBeenMarkedFinished /*|| self.wjhSeenFailure*/ || fabs([startTime timeIntervalSinceNow]) >= data.timeoutInterval)) {
-      break;
-    }
-#else
     if (data.invocationHasCompleted && (data.hasBeenMarkedFinished || data.finishOnExit)) {
       return RLR_Done;
     }
     if (fabs([startTime timeIntervalSinceNow]) >= data.timeoutInterval) {
       return RLR_Timeout;
     }
-#endif
   }
 }
 
