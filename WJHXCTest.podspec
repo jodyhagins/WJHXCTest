@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WJHXCTest"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "WJHXCTest extends XCTest to enable asynchronous testing."
   s.description  = <<-DESC
       __WJHXCTest__ extends XCTest to enable asynchronous testing.  Individual tests can be run synchronously on the main thread (just like the existing mechanism), or asynchronously on either the main thread or a separate thread.  This allows for great flexibility in testing various asynchronous APIs.

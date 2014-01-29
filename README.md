@@ -15,7 +15,7 @@ end
 ```
 ## Using the library
 
-Check out the [documentation](http://cocoadocs.org/docsets/WJHXCTest/0.0.1/) for a detail description of the API.
+Check out the [documentation](http://cocoadocs.org/docsets/WJHXCTest/0.0.2/) for a detail description of the API.
 
 The easiest way is to just include the main header file:
 
