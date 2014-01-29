@@ -61,8 +61,10 @@ dispatchInvocation(_WJHXCTestCaseData *data,_WJHXCTestInvocation *invocation)
 {
   data.invocationHasCompleted = NO;
   dispatch_async(invocationQueue(invocation), ^{
-    [invocation superInvoke];
-    data.invocationHasCompleted = YES;
+    @autoreleasepool {
+      [invocation superInvoke];
+      data.invocationHasCompleted = YES;
+    }
   });
 }
 
@@ -74,7 +76,6 @@ static enum RunLoopResult
 runLoopUntilDoneOrTimeout(_WJHXCTestCaseData *data)
 {
   NSDate *startTime = [NSDate date];
-  // NSDate *expireTime = [NSDate dateWithTimeIntervalSinceNow:data.timeoutInterval];
   for (;;) {
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:data.runLoopInterval]];
     if (data.invocationHasCompleted && (data.hasBeenMarkedFinished || data.finishOnExit)) {
