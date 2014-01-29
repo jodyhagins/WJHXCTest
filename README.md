@@ -8,10 +8,11 @@ __WJHXCTest__ extends XCTest to enable asynchronous testing.  Individual tests c
 
 The code most be compiled and linked into your test.  The project provides a cocoapod spec file, so you can either install __WJHXCTest__ using cocoapods, or copy the files directly into your test target.  For example:
 
-    target :MyTestTarget, :exclusive => true do
-        pod 'WJHXCTest'
-    end
-
+```ruby
+target :MyTestTarget, :exclusive => true do
+    pod 'WJHXCTest'
+end
+```
 ## Using the library
 
 Check out the [documentation](http://cocoadocs.org/docsets/WJHXCTest/0.0.1/) for a detail description of the API.
