@@ -63,14 +63,13 @@
 
 
 @interface WaitTests : XCTestCase
+@property dispatch_group_t group;
+@property (readonly) NSUInteger completionCount;
+@property NSUInteger expectedCount;
 @end
 
-@implementation WaitTests {
-  dispatch_group_t group;
-  NSUInteger _completionCount;
-  NSUInteger expectedCount;
-}
-
+@implementation WaitTests
+@synthesize completionCount = _completionCount;
 - (NSUInteger)completionCount
 {
   @synchronized(self) {
@@ -85,13 +84,7 @@
   }
 }
 
-- (void)setUp {
-  self.wjhFinishOnExit = YES;
-  
-  // Kick off a bunch of asynch operations on several different queues, including the main queue.
-  _completionCount = 0;
-  expectedCount = 1000000;
-  group = dispatch_group_create();
+- (NSArray*)createQueues {
   NSMutableArray *allQueues = [NSMutableArray array];
   for (int i = 0; i < 100; ++i) {
     char buffer[64];
@@ -107,30 +100,44 @@
     }
     [allQueues addObject:q];
   }
-  
-  for (unsigned i = 0; i < 1000; ++i) {
-    dispatch_queue_t queue = allQueues[arc4random_uniform(allQueues.count)];
+  return [allQueues copy];
+}
+
+- (NSUInteger)spawnTasksWithQueues:(NSArray*)queues {
+  dispatch_group_t group = self.group;
+  NSUInteger const limit = 1000;
+  for (NSUInteger i = 0; i < limit; ++i) {
+    dispatch_queue_t queue = queues[arc4random_uniform(queues.count)];
     dispatch_group_async(group, queue, ^{
-      for (unsigned i = 0; i < 1000; ++i) {
-        dispatch_queue_t queue = allQueues[arc4random_uniform(allQueues.count)];
+      for (NSUInteger i = 0; i < limit; ++i) {
+        dispatch_queue_t queue = queues[arc4random_uniform(queues.count)];
         dispatch_group_async(group, queue, ^{
           [self done];
         });
       }
     });
   }
+  return limit * limit;
+}
+
+- (void)setUp {
+  // Setting this means that the test should pass if it exits without any errors, without waiting on any other asynchronous actions.
+  self.wjhFinishOnExit = YES;
+  
+  self.group = dispatch_group_create();
+  self.expectedCount = [self spawnTasksWithQueues:[self createQueues]];
 }
 
 - (void)testAsyncWaitForGroupForever
 {
-  dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
-  XCTAssertEqual(expectedCount, self.completionCount, @"All blocks did not run");
+  dispatch_group_wait(self.group, DISPATCH_TIME_FOREVER);
+  XCTAssertEqual(self.expectedCount, self.completionCount, @"All blocks did not run");
 }
 
 - (void)testAsyncmainWaitForGroupInMainThreadWithBlocksQueuedToBeProcessed
 {
-  XCTFailUnless(dispatch_group_wait(group, DISPATCH_TIME_NOW) == 0);
-  XCTAssertEqual(expectedCount, self.completionCount, @"All blocks did not run");
+  XCTFailUnless(dispatch_group_wait(self.group, DISPATCH_TIME_NOW) == 0);
+  XCTAssertEqual(self.expectedCount, self.completionCount, @"All blocks did not run");
 }
 
 @end
