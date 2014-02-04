@@ -26,13 +26,15 @@
 #define WJHXCTFinished() ([self wjhFinished])
 
 /** Convenience wrapper to wait for a simple condition, failing the test on timeout */
-#define WJHXCTWaitFor(_C_) XCTAssertTrue([self waitUntil:^BOOL{ return _C_; }], @"waitUntil timed out")
+#define WJHXCTFailUnless(_Condition_) XCTAssertTrue([self waitUntil:^BOOL{ return _Condition_; }], @"waitUntil timed out")
+
+/** Convenience wrapper to wait N seconds for a simple condition to become true, failing the test on a timeout */
+#define WJHXCTFailInTimeUnless(_Seconds_, _Condition_) XCTAssertTrue([self waitFor:_Seconds_ orUntil:^BOOL{ return _Condition_; }], @"waitUntil timed out")
 
 
+// For convenience with the rest of XCTest macros, we optionally drag these macros into that namespace
 #if !defined(WJHXCT_NO_CONVENIENCE)
-/** Convenience wrapper for marking an asynchronous test as finished */
 #define XCTFinished() WJHXCTFinished()
-
-/** Convenience wrapper to wait for a simple condition, failing the test on timeout */
-#define XCTWaitFor(_C_) WJHXCTWaitFor(_C_)
+#define XCTFailUnless(_Condition_) WJHXCTFailUnless(_Condition_)
+#define XCTFailInTimeUnless(_Seconds_, _Condition_) WJHXCTFailInTimeUnless(_Seconds_, _Condition_)
 #endif

@@ -129,7 +129,7 @@
 
 - (void)testAsyncmainWaitForGroupInMainThreadWithBlocksQueuedToBeProcessed
 {
-  XCTWaitFor(dispatch_group_wait(group, DISPATCH_TIME_NOW) == 0);
+  XCTFailUnless(dispatch_group_wait(group, DISPATCH_TIME_NOW) == 0);
   XCTAssertEqual(expectedCount, self.completionCount, @"All blocks did not run");
 }
 
