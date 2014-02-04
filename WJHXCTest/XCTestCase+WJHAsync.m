@@ -65,6 +65,31 @@
   return DATA.finishOnExit;
 }
 
+#pragma mark - Waiting for a condition
+- (BOOL)waitUntil:(BOOL(^)(void))conditionBlock
+{
+  return [self waitFor:DISPATCH_TIME_FOREVER orUntil:conditionBlock];
+}
+
+- (BOOL)waitFor:(NSTimeInterval)seconds orUntil:(BOOL (^)(void))conditionBlock
+{
+  _WJHXCTestCaseData *data = DATA;
+  
+  NSDate *testStartTime = data.testStartTime;
+  NSDate *startTime = [NSDate date];
+  for (;;) {
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:data.runLoopInterval]];
+    
+    if (conditionBlock()) {
+      return YES;
+    }
+    
+    if (fabs([startTime timeIntervalSinceNow]) >= seconds || fabs([testStartTime timeIntervalSinceNow]) >= data.timeoutInterval) {
+      return NO;
+    }
+  }
+}
+
 
 #pragma mark - Load/Swizzle
 /*

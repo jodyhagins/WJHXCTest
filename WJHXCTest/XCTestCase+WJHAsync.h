@@ -64,9 +64,9 @@
 - (void)wjhFinished;
 
 
-///-------------------------------------
+///-----------------------------
 /// @name Notification callbacks
-///-------------------------------------
+///-----------------------------
 
 /**
  Handle the timeout of an asynchronous test.
@@ -74,5 +74,33 @@
  This callback method is called by the testing framework when an asynchronous test times-out.  By default, it calls XCTestFail() to fail the test due to the timeout.  TestCase subclasses may want to override the method to handle the timeout differently than the default, which is to call XCTFail().
  */
 - (void)wjhTestDidTimeout;
+
+
+///------------------------------
+/// @name Waiting for a condition
+///------------------------------
+
+/**
+ Wait until the `conditionBlock` returns `YES`.
+ 
+ The call will not wait longer than the overall test timeout.
+ 
+ @param conditionBlock should return `YES` when the condition has been satisfied
+ 
+ @return Returns `YES` if the condition being waited for was satisfied and `NO` if the operation timed out.
+ */
+- (BOOL)waitUntil:(BOOL(^)(void))conditionBlock;
+
+/**
+ Wait for a specified number of seconds, or until the `conditionBlock` returns `YES`.
+ 
+ The call will not wait longer than the overall test timeout.
+ 
+ @param seconds        Timeout if the condition has not been satisfied in this amount of time.
+ @param conditionBlock should return `YES` when the condition has been satisfied
+ 
+ @return Returns `YES` if the condition being waited for was satisfied and `NO` if the operation timed out.
+ */
+- (BOOL)waitFor:(NSTimeInterval)seconds orUntil:(BOOL(^)(void))conditionBlock;
 
 @end

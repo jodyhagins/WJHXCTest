@@ -21,19 +21,18 @@
 
 #import "_WJHXCTestInvocation.h"
 #import "_WJHXCTestCaseData.h"
+#import "../XCTestCase+WJHAsync.h"
 #import <XCTest/XCTest.h>
-
-// Silence the compiler about sending this method
-@interface XCTestCase (WJHAsync)
-- (void)wjhTestDidTimeout;
-@end
-
 
 @implementation _WJHXCTestInvocation
 
-- (void)superInvoke
+- (void)_invokeTest
 {
-  [super invoke];
+  _WJHXCTestCaseData *data = [_WJHXCTestCaseData dataFor:self.target];
+  @autoreleasepool {
+    [super invoke];
+    data.invocationHasCompleted = YES;
+  }
 }
 
 static void asyncInvoke(XCTestCase*, _WJHXCTestInvocation*);
@@ -43,47 +42,30 @@ static void asyncInvoke(XCTestCase*, _WJHXCTestInvocation*);
 }
 @end
 
+static BOOL
+shouldInvokeOnMain(NSInvocation *invocation)
+{
+  NSString *selectorName = NSStringFromSelector(invocation.selector);
+  return [selectorName hasPrefix:@"testAsyncmain"] || [selectorName hasSuffix:@"Asyncmain"];
+}
 
 static dispatch_queue_t
 invocationQueue(NSInvocation *invocation)
 {
-  NSString *selectorName = NSStringFromSelector(invocation.selector);
-  if ([selectorName hasPrefix:@"testAsyncmain"] || [selectorName hasSuffix:@"Asyncmain"]) {
-    return dispatch_get_main_queue();
-  }
-
   NSString *queueName = [NSString stringWithFormat:@"%@.%@", [invocation.target class], NSStringFromSelector(invocation.selector)];
   return dispatch_queue_create([queueName cStringUsingEncoding:NSASCIIStringEncoding], DISPATCH_QUEUE_SERIAL);
 }
 
 static void
-dispatchInvocation(_WJHXCTestCaseData *data,_WJHXCTestInvocation *invocation)
+dispatchInvocation(_WJHXCTestCaseData *data, _WJHXCTestInvocation *invocation)
 {
   data.invocationHasCompleted = NO;
-  dispatch_async(invocationQueue(invocation), ^{
-    @autoreleasepool {
-      [invocation superInvoke];
-      data.invocationHasCompleted = YES;
-    }
-  });
-}
-
-enum RunLoopResult {
-  RLR_Done,
-  RLR_Timeout
-};
-static enum RunLoopResult
-runLoopUntilDoneOrTimeout(_WJHXCTestCaseData *data)
-{
-  NSDate *startTime = [NSDate date];
-  for (;;) {
-    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:data.runLoopInterval]];
-    if (data.invocationHasCompleted && (data.hasBeenMarkedFinished || data.finishOnExit)) {
-      return RLR_Done;
-    }
-    if (fabs([startTime timeIntervalSinceNow]) >= data.timeoutInterval) {
-      return RLR_Timeout;
-    }
+  if (shouldInvokeOnMain(invocation)) {
+    [invocation performSelectorOnMainThread:@selector(_invokeTest) withObject:nil waitUntilDone:NO];
+  } else {
+    dispatch_async(invocationQueue(invocation), ^{
+      [invocation _invokeTest];
+    });
   }
 }
 
@@ -92,7 +74,13 @@ asyncInvoke(XCTestCase *testCase, _WJHXCTestInvocation *invocation)
 {
   _WJHXCTestCaseData *data = [_WJHXCTestCaseData dataFor:testCase];
   dispatchInvocation(data, invocation);
-  if (runLoopUntilDoneOrTimeout(data) == RLR_Timeout) {
+  
+  data.testStartTime = [NSDate date];
+  BOOL success = [testCase waitFor:DISPATCH_TIME_FOREVER orUntil:^BOOL{
+    return (data.invocationHasCompleted && (data.hasBeenMarkedFinished || data.finishOnExit));
+  }];
+  
+  if (!success || fabs([data.testStartTime timeIntervalSinceNow]) >= data.timeoutInterval) {
     [testCase wjhTestDidTimeout];
   }
 }

@@ -97,6 +97,9 @@
 		C80DE6E11895A65C008EE3FB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C80DE6EC1895A65C008EE3FB /* WJHXCTestOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WJHXCTestOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C828C3461895C84E0031C289 /* ExampleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
+		C8A7D50718A1750B00C50E6C /* ChangeLog.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChangeLog.md; sourceTree = SOURCE_ROOT; };
+		C8A7D50818A1750B00C50E6C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		C8A7D50918A1750B00C50E6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,9 @@
 		C80DE69E1894BEC1008EE3FB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C8A7D50718A1750B00C50E6C /* ChangeLog.md */,
+				C8A7D50818A1750B00C50E6C /* LICENSE */,
+				C8A7D50918A1750B00C50E6C /* README.md */,
 				C80DE69F1894BEC1008EE3FB /* WJHXCTest-Prefix.pch */,
 			);
 			name = "Supporting Files";

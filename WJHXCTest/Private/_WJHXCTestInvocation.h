@@ -22,5 +22,4 @@
 #import <Foundation/Foundation.h>
 
 @interface _WJHXCTestInvocation : NSInvocation
-- (void)superInvoke;
 @end

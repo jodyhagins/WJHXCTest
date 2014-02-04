@@ -23,4 +23,16 @@
 #import "XCTestCase+WJHAsync.h"
 
 /** Convenience wrapper for marking an asynchronous test as finished */
-#define XCTFinished() ([self wjhFinished])
+#define WJHXCTFinished() ([self wjhFinished])
+
+/** Convenience wrapper to wait for a simple condition, failing the test on timeout */
+#define WJHXCTWaitFor(_C_) XCTAssertTrue([self waitUntil:^BOOL{ return _C_; }], @"waitUntil timed out")
+
+
+#if !defined(WJHXCT_NO_CONVENIENCE)
+/** Convenience wrapper for marking an asynchronous test as finished */
+#define XCTFinished() WJHXCTFinished()
+
+/** Convenience wrapper to wait for a simple condition, failing the test on timeout */
+#define XCTWaitFor(_C_) WJHXCTWaitFor(_C_)
+#endif

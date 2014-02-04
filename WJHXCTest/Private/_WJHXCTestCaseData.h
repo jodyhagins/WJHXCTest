@@ -22,11 +22,15 @@
 #import <Foundation/Foundation.h>
 
 @interface _WJHXCTestCaseData : NSObject
+
 @property NSTimeInterval timeoutInterval;
 @property NSTimeInterval runLoopInterval;
 @property BOOL hasBeenMarkedFinished;
 @property BOOL invocationHasCompleted;
 @property BOOL seenFailure;
 @property BOOL finishOnExit;
+@property (strong) NSDate *testStartTime;
+
 + (_WJHXCTestCaseData*)dataFor:(id)object;
+
 @end
