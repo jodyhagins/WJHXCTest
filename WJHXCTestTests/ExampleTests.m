@@ -84,7 +84,8 @@
   }
 }
 
-- (NSArray*)createQueues {
+- (NSArray*)createQueues
+{
   NSMutableArray *allQueues = [NSMutableArray array];
   for (int i = 0; i < 100; ++i) {
     char buffer[64];
@@ -92,18 +93,19 @@
     dispatch_queue_t q;
     switch (i % 6) {
       case 0: q = dispatch_get_main_queue(); break;
-      case 1: q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-      case 2: q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-      case 3: q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
-      case 4: q = dispatch_queue_create(buffer, DISPATCH_QUEUE_CONCURRENT);
-      case 5: q = dispatch_queue_create(buffer, DISPATCH_QUEUE_SERIAL);
+      case 1: q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0); break;
+      case 2: q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0); break;
+      case 3: q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0); break;
+      case 4: q = dispatch_queue_create(buffer, DISPATCH_QUEUE_CONCURRENT); break;
+      case 5: q = dispatch_queue_create(buffer, DISPATCH_QUEUE_SERIAL); break;
     }
     [allQueues addObject:q];
   }
   return [allQueues copy];
 }
 
-- (NSUInteger)spawnTasksWithQueues:(NSArray*)queues {
+- (NSUInteger)spawnTasksWithQueues:(NSArray*)queues
+{
   dispatch_group_t group = self.group;
   NSUInteger const limit = 1000;
   for (NSUInteger i = 0; i < limit; ++i) {
@@ -120,7 +122,8 @@
   return limit * limit;
 }
 
-- (void)setUp {
+- (void)setUp
+{
   // Setting this means that the test should pass if it exits without any errors, without waiting on any other asynchronous actions.
   self.wjhFinishOnExit = YES;
   
